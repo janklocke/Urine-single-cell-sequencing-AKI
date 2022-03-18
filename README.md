@@ -9,8 +9,8 @@ You'll find several scripts containing the code for analysis and plotting found 
 3) "AKI_Urine_Sediment_Figure1_script" contains the code for Fig. 1 and Suppl. Fig. 4
 4) "AKI_Urine_Sediment_Figure2_script" contains the code for Fig. 2 and Suppl. Fig. 7-10
 5) "AKI_Urine_Sediment_Figure3_script" contains the code for Fig. 3 and Suppl. Fig. 11-12
-6) "AKI_Urine_Sediment_Figure4_script" contains the code for Fig. 4 and Suppl. Fig. 7-10
-7) "AKI_Urine_Sediment_Figure5_script" contains the code for Fig. 5 
+6) "AKI_Urine_Sediment_Figure4_script" contains the code for Fig. 4 
+7) "AKI_Urine_Sediment_Figure5_script" contains the code for Fig. 5 and Suppl. Fig. 15
 8) "AKI_Urine_Sediment_Figure6_script" contains the code for Fig. 6 
 9) Additional scripts for the remaining Supplements will follow shortly
 
