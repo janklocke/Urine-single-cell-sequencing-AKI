@@ -2,6 +2,7 @@
 
 This repository contains code and data from the publication "Urinary single-cell sequencing captures intrarenal injury and repair processes in human acute kidney injury", currently uploaded as a preprint to biorxiv: https://doi.org/10.1101/2022.02.15.479234 
 
+----
 You'll find several scripts containing the code for analysis and plotting found in the manuscript:
 
 1) "AKI_Urine_Sediment_SO_script" contains the code for generating the whole data Seurat object ("SO_all_urine_cells.rds"/"URINE") and subsetted renal cell Seurat object ("SO_all_kidney_cells.rds"/"RENAL") from raw data
@@ -16,4 +17,15 @@ You'll find several scripts containing the code for analysis and plotting found 
 10) "AKI_Urine_Sediment_SupplFig16-20_script" contains the code for Suppl. Fig. 16, 18-20
 11) "AKI_Urine_Sediment_SupplFig21_script" contains the code for Suppl. Fig. 21
 
+----
+Some additional data is provided in form of these documents: 
+
+DEG_all_urine_cells.rds  	= Table with differentially expressed genes from SO_all_urine_cells.rds  
+SO_kidney_urine_cells.rds  	= Table with differentially expressed genes from SO_kidney_urine_cells.rds  
+
+Urine_AKI_patient_data.csv 		= patient information added as metadata in "AKI_Urine_Sediment_SO_script"
+Urine_AKI_barcode_list.csv 		= barcode patient information used in "AKI_Urine_Sediment_Demultiplexing_pooled_samples_script"
+Urine_AKI_urine_output_crea_data.csv	= longitudinal info on serum creatinine and urine output for patients sampled multiple times (fig. 6)
+
+----
 The raw data will be uploaded to the NCBI GEO repository and linked here upon peer-reviewed publication.
