@@ -1,0 +1,51 @@
+sample.pseudonym;patient;age;AKI.type;gating;sampling;gender;COVID19_infection;KDIGO_AKI_stage;CKDgrade;outcome_after_ninety_daysme.fine;RRT;AKI.timepoint.fine;AKI.timepoint.main
+P005;P005;68;CS;CD45-;single;m;no;3;no;baseline;no;12;d11-21
+P006;P006;76;CS;CD45-;single;m;no;3;no;baseline;no;4;d0-5
+P007;P007;70;prerenal;CD45-;single;f;no;3;no;progress CKD;no;4;d0-5
+P008;P008;83;CS;CD66b-;pool;f;no;2;G3bA1;progress CKD;no;1;d0-5
+P009;P009;80;prerenal;CD66b-;pool;m;no;1;no;baseline;no;3;d0-5
+P010;P010;69;prerenal;CD66b-;pool;f;no;3;no;baseline;no;14;d11-21
+P012;P012;24;prerenal;CD66b-;pool;m;no;2;G4A2;progress CKD;no;4;d0-5
+P013;P013;78;prerenal;CD66b-;pool;m;no;3;G2A1;progress CKD;no;5;d0-5
+P014;P014;74;prerenal;CD66b-;pool;m;no;1;G3A2;baseline;no;5;d0-5
+P015;P015;73;prerenal;CD66b-;pool;f;no;3;no;progress CKD;no;5;d0-5
+P016;P016;58;prerenal;CD66b-;pool;m;no;3;no;progress CKD;no;5;d0-5
+P001;P001;43;pneumonia;CD45-;single;f;yes;3;no;baseline;no;1;d0-5
+P002.1;P002.1;41;pneumonia;CD45-;single;m;yes;2;no;baseline;no;0;d0-5
+P002.2;P002.2;41;pneumonia;CD45-;single;m;yes;2;no;baseline;no;12;d11-21
+P003;P003;55;pneumonia;CD45-;single;m;yes;2;no;baseline;no;3;d0-5
+P017.1;P017.1;67;CS;CD45-;single;f;no;2;no;baseline;CVVHD;1;d0-5
+P017.2;P017.2;67;CS;CD45-;single;f;no;2;no;baseline;CVVHD;8;d6-10
+P018.1;P018.1;71;pneumonia;CD66b-;single;f;no;3;no;death;CVVHD;4;d0-5
+P018.2;P018.2;71;pneumonia;CD66b-;single;f;no;3;no;death;CVVHD;11;d11-21
+P019.1;P019.1;56;CS;CD66b-;single;m;no;3;no;baseline;no;6;d6-10
+P019.2;P019.2;56;CS;CD66b-;single;m;no;3;no;baseline;no;16;d11-21
+P049;P049;44;pneumonia;CD66b-;pool;m;yes;3;no;death;CVVHD;2;d0-5
+P050;P050;33;pneumonia;CD66b-;pool;m;yes;3;no;death;CVVHD;7;d6-10
+P052;P052;78;pneumonia;CD66b-;pool;m;yes;1;G4A2;death;CVVHD;11;d11-21
+P059;P059;62;pneumonia;CD66b-;pool;m;yes;2;no;progress CKD;no;5;d0-5
+P048;P048;64;pneumonia;CD66b-;pool;f;yes;3;no;death;CVVHD;12;d11-21
+P060;P060;62;pneumonia;CD66b-;pool;m;yes;3;no;baseline;no;0;d0-5
+P051;P051;61;pneumonia;CD66b-;pool;m;yes;2;no;baseline;no;13;d11-21
+P053;P053;77;pneumonia;CD66b-;pool;m;yes;3;no;baseline;no;21;d11-21
+P054;P054;51;no AKI;CD66b-;pool;m;yes;na;no;na;no;na;na
+P058;P058;55;pneumonia;CD66b-;pool;m;yes;1;no;baseline;no;0;d0-5
+P061;P061;77;pneumonia;CD66b-;pool;m;yes;3;no;progress CKD;CVVHD;9;d6-10
+P116;P116;55;no AKI;CD66b-;pool;m;yes;na;no;na;no;na;na
+P118;P118;57;no AKI;CD66b-;pool;m;yes;na;no;na;no;na;na
+P119;P119;73;pneumonia;CD66b-;pool;m;yes;2;no;baseline;CVVHD;1;d0-5
+P120;P120;44;no AKI;CD66b-;pool;f;yes;na;no;na;no;na;na
+P021;P021;67;prerenal;CD66b-;single;m;no;2;no;progress CKD;no;4;d0-5
+P022;P022;84;prerenal;CD66b-;single;m;no;1;G3bA3;progress CKD;CVVHD;4;d0-5
+P023.1;P023.1;81;CS;CD66b-;single;m;no;2;no;baseline;no;1;d0-5
+P023.2;P023.2;81;CS;CD66b-;single;m;no;2;no;baseline;no;4;d0-5
+P023.3;P023.3;81;CS;CD66b-;single;m;no;2;no;baseline;no;7;d6-10
+P024.1;P024.1;51;CS;CD66b-;single;m;no;2;no;baseline;no;3;d0-5
+P023.4;P023.4;81;CS;CD66b-;single;m;no;2;no;baseline;no;10;d6-10
+P024.2;P024.2;51;CS;CD66b-;single;m;no;2;no;baseline;no;6;d0-5
+Pool1;POOL1;pool;prerenal;CD66b-;pool;pool;no;pool;pool;pool;pool;pool;pool
+Pool2;POOL1;pool;prerenal;CD66b-;pool;pool;no;pool;pool;pool;pool;pool;pool
+Pool3;POOL2;pool;pneumonia;CD66b-;pool;pool;yes;pool;pool;pool;pool;pool;pool
+Pool4;POOL2;pool;pneumonia;CD66b-;pool;pool;yes;pool;pool;pool;pool;pool;pool
+Pool5;POOL2;pool;pneumonia;CD66b-;pool;pool;yes;pool;pool;pool;pool;pool;pool
+Pool6;POOL2;pool;pneumonia;CD66b-;pool;pool;yes;pool;pool;pool;pool;pool;pool
