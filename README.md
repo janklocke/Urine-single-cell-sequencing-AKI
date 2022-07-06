@@ -21,7 +21,7 @@ You'll find several scripts containing the code for analysis and plotting found 
 Some additional data is provided in form of these documents: 
 
 DEG_all_urine_cells.rds  	= Table with differentially expressed genes from SO_all_urine_cells.rds  
-SO_kidney_urine_cells.rds  	= Table with differentially expressed genes from SO_kidney_urine_cells.rds  
+DEG_kidney_urine_cells.rds  	= Table with differentially expressed genes from SO_kidney_urine_cells.rds  
 
 Urine_AKI_patient_data.csv 		= patient information added as metadata in "AKI_Urine_Sediment_SO_script"
 Urine_AKI_barcode_list.csv 		= barcode patient information used in "AKI_Urine_Sediment_Demultiplexing_pooled_samples_script"
