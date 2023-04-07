@@ -230,11 +230,11 @@ for (i in c(1,2,3,5,6)) {
 }
 
 PoolList[[1]]@meta.data[is.na(PoolList[[1]]$orig.ident),]$orig.ident <- "pool1"
-PoolList[[2]]@meta.data[is.na(PoolList[[2]]$orig.ident),]$orig.ident <- "pool1"
-PoolList[[3]]@meta.data[is.na(PoolList[[3]]$orig.ident),]$orig.ident <- "pool2"
-PoolList[[4]]@meta.data[is.na(PoolList[[4]]$orig.ident),]$orig.ident <- "pool2"
-PoolList[[5]]@meta.data[is.na(PoolList[[5]]$orig.ident),]$orig.ident <- "pool2"
-PoolList[[6]]@meta.data[is.na(PoolList[[6]]$orig.ident),]$orig.ident <- "pool2"
+PoolList[[2]]@meta.data[is.na(PoolList[[2]]$orig.ident),]$orig.ident <- "pool2"
+PoolList[[3]]@meta.data[is.na(PoolList[[3]]$orig.ident),]$orig.ident <- "pool3"
+PoolList[[4]]@meta.data[is.na(PoolList[[4]]$orig.ident),]$orig.ident <- "pool4"
+PoolList[[5]]@meta.data[is.na(PoolList[[5]]$orig.ident),]$orig.ident <- "pool5"
+PoolList[[6]]@meta.data[is.na(PoolList[[6]]$orig.ident),]$orig.ident <- "pool6"
 
 ## save pool Seurat objects ----
 PoolNames <- c("AKI_Urine_sediment_Pool1.rds", "AKI_Urine_sediment_Pool3.rds","AKI_Urine_sediment_Pool2.rds", "AKI_Urine_sediment_Pool4.rds", "AKI_Urine_sediment_Pool5.rds", "AKI_Urine_sediment_Pool6.rds")
