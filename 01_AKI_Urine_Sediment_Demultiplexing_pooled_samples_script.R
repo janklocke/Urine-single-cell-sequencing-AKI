@@ -219,14 +219,22 @@ barcodes <- barcodes[,2:5]
 
 
 ## assign sample names to cells via barcode ----
-for (i in 1:length(PoolList)) {
+for (i in 1:6) {
   PoolList[[i]]$orig.ident <- NA
   PoolList[[i]]@meta.data[PoolList[[i]]$hash.ID == "CD298B0251", ]$orig.ident <- barcodes[rownames(barcodes)[i], "CD298B0251"]
   PoolList[[i]]@meta.data[PoolList[[i]]$hash.ID == "CD298B0252", ]$orig.ident <- barcodes[rownames(barcodes)[i], "CD298B0252"]
   PoolList[[i]]@meta.data[PoolList[[i]]$hash.ID == "CD298B0253", ]$orig.ident <- barcodes[rownames(barcodes)[i], "CD298B0253"]
+}
+for (i in c(1,2,3,5,6)) {
   PoolList[[i]]@meta.data[PoolList[[i]]$hash.ID == "CD298B0254", ]$orig.ident <- barcodes[rownames(barcodes)[i], "CD298B0254"]
 }
 
+PoolList[[1]]@meta.data[is.na(PoolList[[1]]$orig.ident),]$orig.ident <- "pool1"
+PoolList[[2]]@meta.data[is.na(PoolList[[2]]$orig.ident),]$orig.ident <- "pool1"
+PoolList[[3]]@meta.data[is.na(PoolList[[3]]$orig.ident),]$orig.ident <- "pool2"
+PoolList[[4]]@meta.data[is.na(PoolList[[4]]$orig.ident),]$orig.ident <- "pool2"
+PoolList[[5]]@meta.data[is.na(PoolList[[5]]$orig.ident),]$orig.ident <- "pool2"
+PoolList[[6]]@meta.data[is.na(PoolList[[6]]$orig.ident),]$orig.ident <- "pool2"
 
 ## save pool Seurat objects ----
 PoolNames <- c("AKI_Urine_sediment_Pool1.rds", "AKI_Urine_sediment_Pool3.rds","AKI_Urine_sediment_Pool2.rds", "AKI_Urine_sediment_Pool4.rds", "AKI_Urine_sediment_Pool5.rds", "AKI_Urine_sediment_Pool6.rds")
