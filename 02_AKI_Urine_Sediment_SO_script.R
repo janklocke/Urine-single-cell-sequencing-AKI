@@ -56,7 +56,7 @@ Pool6 <- readRDS("~/AKI_Urine_sediment_Pool6.rds")
 
 ### remove samples from patients without AKI in patient pools ----
 Pool4 <- subset(Pool4, idents = "P054", invert=T)
-Pool6 <- subset(Pool6, idents = c( "FlUriCov116", "FlUriCov118", "FlUriCov120"), invert=T)
+Pool6 <- subset(Pool6, idents = c( "P116", "P118", "P120"), invert=T)
 
 # create and merge Seurat Objects ----
 
