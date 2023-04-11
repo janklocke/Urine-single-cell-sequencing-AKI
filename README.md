@@ -26,7 +26,6 @@ DEG_kidney_urine_cells.rds  	= Table with differentially expressed genes from SO
 Urine_AKI_patient_data.csv 		= patient information added as metadata in "AKI_Urine_Sediment_SO_script"
 Urine_AKI_barcode_list.csv 		= barcode patient information used in "AKI_Urine_Sediment_Demultiplexing_pooled_samples_script"
 Urine_AKI_urine_output_crea_data.csv	= longitudinal info on serum creatinine and urine output for patients sampled multiple times (fig. 6)
-Urine_AKI_post_QC_cellnames.rds	= list of cells comprising the whole data Seurat object ("SO_all_urine_cells.rds"/"URINE") post quality control
 
 ----
 The raw data is uploaded to the NCBI GEO repository GSE199321. Seurat objects used for the analysis and generation of figures can be found here:
