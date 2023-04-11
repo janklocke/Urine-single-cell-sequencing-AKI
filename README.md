@@ -29,4 +29,8 @@ Urine_AKI_urine_output_crea_data.csv	= longitudinal info on serum creatinine and
 Urine_AKI_post_QC_cellnames.rds	= list of cells comprising the whole data Seurat object ("SO_all_urine_cells.rds"/"URINE") post quality control
 
 ----
-The raw data will be uploaded to the NCBI GEO repository and linked here upon peer-reviewed publication.
+The raw data is uploaded to the NCBI GEO repository GSE199321. Seurat objects used for the analysis and generation of figures can be found here:
+Seurat object containing all urine cells post QC: https://figshare.com/articles/dataset/KI_2022_Klocke_et_al_SO_all_urine_cells_rds/22567201
+Seurat object containing only kidney parenchymal cells post QC: https://figshare.com/articles/dataset/KI_2022_Klocke_et_al_SO_kidney_urine_cells_rds/22567195
+
+
