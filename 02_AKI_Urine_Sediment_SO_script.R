@@ -162,14 +162,12 @@ URINE_noQC <- URINE
 
 ###################
 # since the scDblFinder() function has slightly variable output, the list of quality filtered cells in URINE may vary based on which cells 
-# have been assigned as singlets/doublets. To guarantee an output equal to the one shown in the paper, we provide a list of cells comprising
-# the URINE Seurat object used in the downstream analysis ("URINE_AKI_post_QC_cellnames.rds"). You can use the following code to subset the
-# SO and skip the QC control subsetting steps and continue with the step "# gather simple info on SO ----":
-URINE_post_QC_cellnames <- readRDS("URINE_AKI_post_QC_cellnames.rds")
-URINE <- subset(URINE_noQC, cells = URINE_post_QC_cellnames)
+# have been assigned as singlets/doublets. To guarantee an output equal to the one shown in the paper, we provide the URINE Seurat object post QC via
+# figshare: https://figshare.com/articles/dataset/KI_2022_Klocke_et_al_SO_all_urine_cells_rds/22567201
+# otherwise you can continue with the code getting a similar albeit slightly differing object. 
 ###################
 
-#URINE <- subset(URINE, subset = nFeature_RNA > 200 & nFeature_RNA < 4000 & nCount_RNA > 500 & nCount_RNA < 50000 & percent.mt < 20 & multiplet_class == "singlet")
+URINE <- subset(URINE, subset = nFeature_RNA > 200 & nFeature_RNA < 4000 & nCount_RNA > 500 & nCount_RNA < 50000 & percent.mt < 20 & multiplet_class == "singlet")
 
 ## normalization, dim. reduction and clustering 1 ----
 ## in the first round of clustering, we will consider all cells with percent.mt < 20% and 
@@ -177,31 +175,31 @@ URINE <- subset(URINE_noQC, cells = URINE_post_QC_cellnames)
 ## mitochondrial RNA of 10% for further analysis, as opposed to kidney cells (20%)
 
 ## perform normalization, scaling, etc. with SCTransform
-#URINE <- SCTransform(object = URINE, vars.to.regress = "percent.mt", method = "glmGamPoi", verbose = T)
-#URINE <- RunPCA(object = URINE, dims = 1:45, verbose = T)
+URINE <- SCTransform(object = URINE, vars.to.regress = "percent.mt", method = "glmGamPoi", verbose = T)
+URINE <- RunPCA(object = URINE, dims = 1:45, verbose = T)
 
 ## perform batch correction with harmony
 ## tau and theta are adjusted to prevent overcompenstation of batch-effects and overclustering of small vs. large samples 
-#URINE <- RunHarmony(URINE, group.by.vars = c("orig.ident"), lambda = 2, tau = 1000, theta = 1, assay.use = "SCT")
+URINE <- RunHarmony(URINE, group.by.vars = c("orig.ident"), lambda = 2, tau = 1000, theta = 1, assay.use = "SCT")
 
 ## run dimensionality reduction and find clusters
-#URINE <- RunUMAP(object = URINE, reduction = "harmony", dims = 1:45, verbose = T)
-#URINE <- FindNeighbors(object = URINE, reduction = "harmony", dims = 1:45, verbose = T)
-#URINE <- FindClusters(object = URINE, resolution = 0.3, verbose = T)
+URINE <- RunUMAP(object = URINE, reduction = "harmony", dims = 1:45, verbose = T)
+URINE <- FindNeighbors(object = URINE, reduction = "harmony", dims = 1:45, verbose = T)
+URINE <- FindClusters(object = URINE, resolution = 0.3, verbose = T)
 
 ## Find differentially expressed genes per cluster
-#URINE.markers <- FindAllMarkers(URINE, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25)
-#URINE.top10 <- URINE.markers %>% group_by(cluster) %>% top_n(n = 10, wt = avg_log2FC)
+URINE.markers <- FindAllMarkers(URINE, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25)
+URINE.top10 <- URINE.markers %>% group_by(cluster) %>% top_n(n = 10, wt = avg_log2FC)
 
 ## In clusters of leukocyte and urogenital origin, find cells with mitochondiral RNA > 10%
-#highmito <- WhichCells(URINE, idents = c(0, 1, 2, 6, 7, 8, 9, 11, 13, 14, 18), expression = percent.mt > 10, invert = F)
-#DimPlot(URINE, reduction = "umap", label = T, cells.highlight = highmito, cols = custom_colors[[1]]) + NoLegend()
+highmito <- WhichCells(URINE, idents = c(0, 1, 2, 6, 7, 8, 9, 11, 13, 14, 18), expression = percent.mt > 10, invert = F)
+DimPlot(URINE, reduction = "umap", label = T, cells.highlight = highmito, cols = custom_colors[[1]]) + NoLegend()
 
 ## normalization, dim. reduction and clustering 2 ----
 ## repeat dim. red. and clustering, but remove leukocytes/urogenital cells with >10% mitochondrial RNA
-#URINE <- subset(URINE_noQC, cells = highmito, invert = T)
+URINE <- subset(URINE_noQC, cells = highmito, invert = T)
 ## subset by percent.mt, singlets and features
-#URINE <- subset(URINE, subset = nFeature_RNA > 200 & nFeature_RNA < 4000 & nCount_RNA > 500 & nCount_RNA < 50000 & percent.mt < 20 & multiplet_class == "singlet")
+URINE <- subset(URINE, subset = nFeature_RNA > 200 & nFeature_RNA < 4000 & nCount_RNA > 500 & nCount_RNA < 50000 & percent.mt < 20 & multiplet_class == "singlet")
 
 # gather simple info on SO ----
 URINE.info <- tibble(URINE_info = c("Total cells", 
